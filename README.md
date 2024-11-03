@@ -41,4 +41,33 @@ other data repository site.
    Handling duplicate values
    Data Cleaning and formatting
 
-   ### Data Analysis
+   ### Exploratory Data Analysis
+   -----------------------------
+   This is where we use quering functions or DAX expression to solve the questions which are;
+   
+   ```SQL
+SELECT Region, Count(CustomerID)AS Region_Customers FROM [Customers Data csv]
+GROUP BY Region
+
+SELECT TOP 1 SubscriptionType, Count(CustomerID) AS SubCustomer_No FROM [Customers Data csv]
+GROUP BY SubscriptionType
+
+SELECT AVG(Duration) AS Avgsub_Duration
+FROM [Customers Data csv]
+
+SELECT Duration FROM [Customers Data csv]
+WHERE Duration > '366'
+
+SELECT SubscriptionType, SUM(Revenue) AS SubType_Revenue
+FROM [Customers Data csv]
+GROUP BY SubscriptionType
+
+SELECT Region, Count(Canceled) AS Region_Canc
+FROM [Customers Data csv]
+GROUP BY Region
+
+SELECT CustomerID FROM [Customers Data csv]
+WHERE datediff(month, SubscriptionStart, SubscriptionEnd) <= 6
+```
+
+
