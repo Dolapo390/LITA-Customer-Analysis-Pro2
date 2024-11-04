@@ -85,6 +85,15 @@ GROUP BY Region
 
 SELECT CustomerID FROM [Customers Data csv]
 WHERE datediff(month, SubscriptionStart, SubscriptionEnd) <= 6
+
+SELECT Region, COUNT(Canceled) AS Canceled_customers FROM [Customers Data csv] 
+WHERE Canceled > 0
+GROUP BY Region
+
+SELECT Region, COUNT(Canceled) AS Active_customers FROM [Customers Data csv]
+WHERE Canceled < 1
+GROUP BY Region
+
 ```
 
 ![Customers Pivot](https://github.com/user-attachments/assets/9d8cb9d7-9bb2-4692-9190-ea507a4c1f85)
@@ -95,8 +104,7 @@ WHERE datediff(month, SubscriptionStart, SubscriptionEnd) <= 6
 
 ### Summary
 In conclusion the east has the highest numbers of customers and the revenue and all the duration of the subscription is either a year/leap year not more than 12 months.
-The most common subscription type with the highest revenue is the basic.
-
+The most common subscription type with the highest revenue is the basic. The East customers are the most active customers and there's no cancellation while other regions Five thousands customers canceled.
 
 
 
