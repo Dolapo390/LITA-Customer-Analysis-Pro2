@@ -11,10 +11,16 @@
 
 [Data Cleaning and Preparation](#data-cleaning-preparation)
 
+[Exploratory Data Analysis](#exploratory-data-analysis)
+
+[Analysis](#analysis)
+
+[Summary](#summary)
+
 ### Project Overview
 ---------------------
 This project is all about my second project with the Incubators Hub. This projects aims to generates an insights into the customers subscription performance within a year. 
-By analysing the various parameters in the data received we seek to gather enough insight to make reasonable decisions which then enables us to tell a compelling stories around our 
+By analysing the various parameters in the data received by identifying segments and trends of subscription type and the key trends in cancellation and renewals. we seek to gather enough insight to make reasonable decisions which then enables us to tell a compelling stories around our 
 data ferom the insight gotten and to know the best subscription performance from our data.
 
 ### Data Sources
@@ -43,8 +49,19 @@ other data repository site.
 
    ### Exploratory Data Analysis
    -----------------------------
-   This is where we use quering functions or DAX expression to solve the questions which are;
-   
+   EDA involved the exploration of the data to answer some questions about customers Data such as;
+   - Retrive the total numbers of customers from each region
+   - Find the most popular subscription type by the numbers of customers
+   - Find customers who canceled their subscription within 6 months
+   - Calculate the average subscription duration of all customers
+   - Find customers with subscription longer than 12 months
+   - Calculate total revenue by subscription type
+   - Find top 3 regions by subscription cancellation
+   - Find the total numbers of active and cancelled
+
+   ### Analysis
+   -------------------------
+   This is where we include some basic lines of code or queries or even some of the DAX expressions used during the analysis;
    ```SQL
 SELECT Region, Count(CustomerID)AS Region_Customers FROM [Customers Data csv]
 GROUP BY Region
@@ -69,5 +86,19 @@ GROUP BY Region
 SELECT CustomerID FROM [Customers Data csv]
 WHERE datediff(month, SubscriptionStart, SubscriptionEnd) <= 6
 ```
+
+![Customers Pivot](https://github.com/user-attachments/assets/9d8cb9d7-9bb2-4692-9190-ea507a4c1f85)
+
+![Customers Charts](https://github.com/user-attachments/assets/99d4d35d-fd09-4909-8c28-7e317d43ba00)
+
+![Customer Data PowerBI](https://github.com/user-attachments/assets/0706eae4-1c72-4857-9b94-2bf7b2059157)
+
+### Summary
+In conclusion the east has the highest numbers of customers and the revenue and all the duration of the subscription is either a year/leap year not more than 12 months.
+The most common subscription type with the highest revenue is the basic.
+
+
+
+
 
 
