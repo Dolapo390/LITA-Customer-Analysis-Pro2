@@ -100,7 +100,8 @@ GROUP BY Region
 
 ![Customers Charts](https://github.com/user-attachments/assets/99d4d35d-fd09-4909-8c28-7e317d43ba00)
 
-![Customer Data PowerBI](https://github.com/user-attachments/assets/0706eae4-1c72-4857-9b94-2bf7b2059157)
+![Customers Subcriptions](https://github.com/user-attachments/assets/3a268c63-e0eb-43c5-9adb-9f1809f17101)
+
 
 ### Summary
 In conclusion the east has the highest numbers of customers and the revenue and all the duration of the subscription is either a year/leap year not more than 12 months.
